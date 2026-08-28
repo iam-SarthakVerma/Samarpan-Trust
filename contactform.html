@@ -1,64 +1,637 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact-Samarpan</title>
-    <link rel="shortcut icon" href="./samarpan.jpg" type="image/x-icon">
-</head>
-<body>
-    <main>
-  <div>
-    <section>
-      <fieldset>
-        <legend>TELEPHONE</legend>
-        <br>
-        <br/>
-        <span>+91 7257089421</span>
-        <br>
-        <span><Address>Shri Paras Complex,<br>
-            Laxmi chowk,<br>
-            Bagaha-1, West Champaran, Bihar
-            <br>845101
-        </Address></span>
-      </fieldset>
-    </section>
-  </div>
-  <div><br>
-    <section>
-      <fieldset>
-        <legend>CONTACT FORM</legend><br><br>
-        <span>General Enquiries</span><br><br>
-        <form>
-            <label for="first_name">First Name</label>
-            <br>
-            <input type="text" id="first_name" name="name_of_sender">
-            <br><br/>
-            <label for="last_name">Last Name</label>
-            <br>
-            <input type="text" id="last_name" name="name_of_sender">
-            <br><br/>
-            <label type="mail_id_of_enquirier">Email:</label>
-            <br>
-            <input type="email" id="mail_id_of_enquirier" name="mail_id">
-            <br><br/>
-            <label for="contact_info">Contact</label>
-            <br>
-            <input type="tel" id="contact_info" name="contact_info">
-            <br><br/>
-            <label for="message">Message</label>
-            <br>
-            <textarea name="message_from_enquirier" id="message" cols="100" rows="9"></textarea>
-            <br>
-            <input type="submit" value="Send" id="submit">
 
-        
-            
-        </fieldset>
-        </form>
-    </section>
-  </div>
+    <meta name="description"
+        content="Contact Samarpan Trust for general enquiries, support and information.">
+
+    <title>Contact - Samarpan</title>
+
+    <link rel="shortcut icon" href="./Images/SamarpanTrust.png" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="contactform-style.css">
+</head>
+
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="site-header">
+
+        <nav class="nav">
+
+            <div class="information">
+
+                <div id="logo">
+                    <img src="./Images/SamarpanTrust.png"
+                        alt="Samarpan Trust Logo">
+                </div>
+
+                <div id="name">
+                    <h1>
+                        <a href="./index.html">Samarpan</a>
+                    </h1>
+                </div>
+
+            </div>
+
+
+            <!-- DESKTOP NAV -->
+
+            <div class="center-nav" id="mainNav">
+
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="/about">About Us</a>
+                    </li>
+
+                    <li>
+                        <a href="/campaigns">Campaigns</a>
+                    </li>
+
+                    <!-- <li>
+                        <a href="#">Blog</a>
+                    </li> -->
+
+                    <li>
+                        <a href="/contactform">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="rightside-nav">
+
+                <a href="/Donation">
+                    <button type="button">
+                        Donate Now
+                    </button>
+                </a>
+
+            </div>
+
+
+            <!-- HAMBURGER -->
+
+            <button
+                class="hamburger"
+                id="hamburger"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+
+                <i class="ri-menu-line"></i>
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <main class="contact-page">
+
+        <section class="contact-wrapper">
+
+
+            <!-- ================= LEFT SIDE ================= -->
+
+            <section class="contact-info">
+
+                <div class="info-card">
+
+                    <div class="info-decoration"></div>
+
+                    <span class="section-label">
+                        GET IN TOUCH
+                    </span>
+
+                    <h1>
+                        Contact <span>Us</span>
+                    </h1>
+
+                    <p class="info-intro">
+                        We'd love to hear from you. Reach out to
+                        Samarpan Trust for any questions, suggestions
+                        or general enquiries.
+                    </p>
+
+
+                    <!-- PHONE -->
+
+                    <div class="info-item">
+
+                        <div class="info-icon">
+                            <i class="ri-phone-line"></i>
+                        </div>
+
+                        <div>
+                            <h3>Telephone</h3>
+
+                            <a href="tel:+8340207920">
+                                +91 8340207920
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <!-- ADDRESS -->
+
+                    <div class="info-item">
+
+                        <div class="info-icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>Address</h3>
+
+                            <address>
+                                Shri Paras Complex,<br>
+                                Laxmi Chowk,<br>
+                                Bagaha-1,<br>
+                                West Champaran,<br>
+                                Bihar - 845101
+                            </address>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MAP -->
+
+                    <div class="map-container">
+
+                        <iframe
+                            src="https://www.google.com/maps?q=27.0959688,84.0894903&z=18&output=embed"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Samarpan Trust Location">
+                        </iframe>
+
+                    </div>
+
+
+                    <a
+                        class="map-button"
+                        href="https://maps.app.goo.gl/bBBmtTJgp89kskUJ7"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <i class="ri-map-2-line"></i>
+
+                        View Location on Map
+
+                        <i class="ri-arrow-right-line"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= RIGHT SIDE ================= -->
+
+            <section class="contact-form-section">
+
+                <div class="form-card">
+
+                    <div class="form-heading">
+
+                        <span>
+                            GENERAL ENQUIRIES
+                        </span>
+
+                        <h2>
+                            Contact Form
+                        </h2>
+
+                        <p>
+                            Have a question or want to know more?
+                            Send us a message and we'll get back to you.
+                        </p>
+
+                    </div>
+
+
+                    <!-- SUCCESS MESSAGE -->
+
+                    <div
+                        class="success-message"
+                        id="successMessage">
+
+                        <i class="ri-checkbox-circle-fill"></i>
+
+                        <div>
+                            <h3>Thanks for contacting us!</h3>
+
+                            <p>
+                                Your message has been sent successfully.
+                                We will get back to you soon.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- FORM -->
+
+                    <form
+                        id="contactForm"
+                        action="https://formsubmit.co/samarpantrustbagaha702025@gmail.com"
+                        method="POST">
+
+                        <!-- FormSubmit settings -->
+
+                        <input
+                            type="hidden"
+                            name="_subject"
+                            value="New Inquiry from Samarpan Website">
+
+                        <input
+                            type="hidden"
+                            name="_template"
+                            value="table">
+
+                        <input
+                            type="hidden"
+                            name="_captcha"
+                            value="false">
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="first_name">
+                                    First Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="first_name"
+                                    name="First Name"
+                                    placeholder="Enter your first name"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="last_name">
+                                    Last Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="last_name"
+                                    name="Last Name"
+                                    placeholder="Enter your last name"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="Email"
+                                    placeholder="Enter your email address"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="contact">
+                                    Contact
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="contact"
+                                    name="Contact"
+                                    placeholder="Enter your phone number">
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="Message"
+                                placeholder="Write your message here..."
+                                required></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            id="submit">
+
+                            <span>Send Message</span>
+
+                            <i class="ri-arrow-right-line"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+        </section>
+
     </main>
-   
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <!-- TOP FOOTER -->
+
+        <div class="top-footer">
+
+
+            <!-- LEFT -->
+
+            <div class="leftside-top">
+
+                <div class="header-leftside-top">
+
+                    <div class="icon-header-leftside-top">
+
+                        <img
+                            src="./Images/SamarpanTrust.png"
+                            alt="Samarpan Trust Logo">
+
+                    </div>
+
+                    <div class="title-header-leftside-top">
+
+                        <p>
+                            Samarpan Trust
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="description-header-leftside-top">
+
+                    <p>
+                        Empowering communities, transforming lives.
+                        Your support can bring hope to those in need.
+                    </p>
+
+                </div>
+
+
+                <div class="social-media">
+
+                    <div>
+                        <a
+                            href="https://www.facebook.com/profile.php?id=61576899658562"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a
+                            href="https://www.instagram.com/samarpan_trust_bagaha/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a
+                            href="https://www.youtube.com/@samarpan_suvir/featured"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a
+                            href="https://x.com/samarpaa170551"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="ri-twitter-x-line"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- NEWSLETTER -->
+
+            <div class="rightside-top">
+
+                <div class="header-rightside-top">
+
+                    <p>
+                        Stay Updated with Samarpan
+                    </p>
+
+                </div>
+
+
+                <div class="newsletter">
+
+                    <form
+                        class="newsletter-form"
+                        action="https://formsubmit.co/samarpantrustbagaha702025@gmail.com"
+                        method="POST">
+
+                        <input
+                            type="hidden"
+                            name="_subject"
+                            value="New Newsletter Subscription">
+
+                        <input
+                            type="hidden"
+                            name="_captcha"
+                            value="false">
+
+                        <input
+                            type="email"
+                            name="Subscriber Email"
+                            placeholder="Your mail address"
+                            id="mail-for-subscribe"
+                            required>
+
+                        <button
+                            type="submit"
+                            id="subscribe-button">
+
+                            Subscribe
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MIDDLE FOOTER -->
+
+        <div class="middle-footer">
+
+
+            <div class="footer-column">
+
+                <p>Quick Links</p>
+
+                <a href="/">Home</a>
+                <a href="/about">About Us</a>
+                <a href="/campaigns">Campaigns</a>
+                <!-- <a href="#">Blog</a> -->
+                <a href="/contactform">Contact</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <p>Account</p>
+
+                <a href="#">Admin</a>
+                <a href="#">Volunteer</a>
+                <a href="#">Donor</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <p>Platform</p>
+
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+
+            </div>
+
+
+            <div class="location">
+
+                <p class="location-title">
+                    Location
+                </p>
+
+
+                <div class="footer-contact-row">
+
+                    <strong>
+                        Address:
+                    </strong>
+
+                    <span>
+                        Shri Paras Complex,<br>
+                        Laxmi Chowk,<br>
+                        Bagaha-1,<br>
+                        West Champaran,<br>
+                        Bihar - 845101
+                    </span>
+
+                </div>
+
+
+                <div class="footer-contact-row">
+
+                    <strong>
+                        Email:
+                    </strong>
+
+                    <a
+                        href="mailto:samarpantrustbagaha702025@gmail.com">
+                        samarpantrustbagaha702025@gmail.com
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOTTOM -->
+
+        <div class="bottom-footer">
+
+            <p>
+                <i class="ri-copyright-line"></i>
+                2026 Samarpan Trust. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="contactform-script.js"></script>
+
 </body>
+
 </html>

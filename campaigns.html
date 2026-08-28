@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Samarpan, a charity located in Bagaha, Bihar, works to provide water and food to people in need, along with daily essentials and education for needy children.">
-    <title>Donation-समर्पण</title>
     <link rel="shortcut icon" href="./Images/SamarpanTrust.png" type="image/x-icon">
-    <link rel="stylesheet" href="donation-style.css">
+    <title>Campaigns-समर्पण</title>
+    <link rel="stylesheet" href="campaigns-style.css">
     <link
-        href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
-        rel="stylesheet"
-    />
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
+
+
 </head>
 <body>
     <header>
@@ -39,40 +41,45 @@
                 <a href="/Donation"><button>Donate Now</button></a>
 
             </div>
+            <button class="hamburger" id="hamburger">
+                <i class="ri-menu-line"></i>
+            </button>
         </nav>
     </header>
     <main>
-        <section id="donation-upper-part">
+        <section>
+            <div id="campaigns-container">
 
-            <div id="donation-upper-image">
-                <img src="./Images/Donation-page-upper.png" alt="Donation" loading="lazy">
+                <!-- decorative dotted line arcing from the button up toward the oval, with a heart floating above -->
+                <svg class="hero-decor-path" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M 9 82 C 24 94, 42 94, 52 80 S 66 52, 72 30" />
+                </svg>
+                <i class="ri-heart-fill hero-decor-heart" style="left: 56%; top: 16%;" aria-hidden="true"></i>
 
-                <div class="wave">
-                    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-                        <path d="M0,75
-                            C180,105 320,95 500,70
-                            C680,45 820,90 1020,95
-                            C1200,100 1320,65 1440,75
-                            L1440,120
-                            L0,120 Z">
-                        </path>
+                <div id="campaigns-container-leftpart">
+                    <div id="campaigns-container-leftpart-heading-upper">
+                        <p id="campaigns-container-leftpart-header">Our <span id="campaigns-container-leftpart-header-orange">Campaigns</span></p>
+                        <p id="campaigns-container-leftpart-subheader">Together, We can create Meaningful Change.</p>
+                    </div>
+                    <div id="campaigns-container-leftpart-heading-lower">
+                        <p id="campaigns-container-leftpart-heading-lower-description">
+                            Discover the initiatives supported by Samarpan Trust and help us extend food, education, dignity and essential support to communities in need.
+                        </p>
+                    </div>
+                    <a href="/Donation">
+                        <button class="hero-cta">
+                            Donate Now
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+
+                <div id="campaigns-container-rightpart">
+                    <svg class="hero-decor-squiggle" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+                        <path d="M10 60 C 25 20, 45 20, 50 45 C 55 70, 75 70, 80 45 C 83 30, 90 25, 95 20"
+                              stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
                     </svg>
-                </div>
-
-            </div>
-
-        </section>
-        <section id="donation-mid-part">
-            <div id="donation-mid-part-header">
-                <h1 id="donation-mid-part-heading">SCAN & DONATE</h1>
-                <span id="donation-mid-part-subheading">Scan the QR Code using any UPI App</span>
-            </div>
-            <div id="qr_code_box">
-                <div id="qr_code_box_upper">
-                    <img src="./Images/Donation-Qr.png" alt="QR-Code" loading="lazy">
-                </div>
-                <div id="qr_code_box_lower">
-                    <img src="./Images/other-upi.png" alt="alternate-upi-options" loading="lazy">
+                    <img src="./Images/Campaign.png" alt="happy-children.png" loading="lazy">
                 </div>
 
             </div>
@@ -85,7 +92,7 @@
             <div class="campaigns-homepage-grid">
                 <div class="campaign1">
                     <div class="image">
-                        <img src="./Images/Asahay Bacha.jpg"
+                        <img src="./Images/our_vision_education.png"
                         alt="underprivileged-kid.jpg"
                         loading="lazy" class="poster">
                         <div class="overlay">
@@ -98,7 +105,7 @@
                 </div>
                 <div class="campaign2">
                     <div class="image">
-                        <img src="./Images/feeding-underprivileged.JPG"
+                        <img src="./Images/our_mission_volunteer.png"
                         alt="Feeding-underprivileged-people.jpg"
                         loading="lazy" class="poster">
                         <div class="overlay">
@@ -123,29 +130,65 @@
                     <p class="description-campaigns-homepage-grid">Your support helps us bring safe, clean drinking water to those who lack access to it.</p>
                     <button class="category">Water for Life</button>
                 </div>
+                <div class="campaign4">
+                    <div class="image">
+                        <img src="./Images/clothes-distribution.png"
+                        alt="saree-distribution"
+                        loading="lazy" class="poster">
+                        <div class="overlay">
+                            <a href="/Donation"><span>Donate Now</span></a>
+                        </div>
+                    </div>
+                    <p class="heading-campaigns-homepage-grid">Restore Dignity Through Cloth Distribution</p>
+                    <p class="description-campaigns-homepage-grid">Your support helps provide essential clothing to people from underprivileged families, bringing comfort, confidence, and dignity to those who need it most.</p>
+                    <button class="category">Cloth Distribution</button>
+                </div>
+                <div class="campaign5">
+                    <div class="image">
+                        <img src="./Images/Feeding-strays.png"
+                        alt="feeding-distribution"
+                        loading="lazy" class="poster">
+                        <div class="overlay">
+                            <a href="/Donation"><span>Donate Now</span></a>
+                        </div>
+                    </div>
+                    <p class="heading-campaigns-homepage-grid">A Meal of Compassion for Strays</p>
+                    <p class="description-campaigns-homepage-grid">Your support helps us provide food and care to stray animals, ensuring they don't have to go hungry and receive the kindness they deserve.</p>
+                    <button class="category">Stray Animal Care</button>
+                </div>
+                <div class="campaign6">
+                    <div class="image">
+                        <img src="./Images/Blanket-distribution.jpeg"
+                        alt="Blanket-distribution.png"
+                        loading="lazy" class="poster">
+                        <div class="overlay">
+                            <a href="/Donation"><span>Donate Now</span></a>
+                        </div>
+                    </div>
+                    <p class="heading-campaigns-homepage-grid">Warmth for Every Child</p>
+                    <p class="description-campaigns-homepage-grid">Your support helps provide warm blankets to underprivileged children, protecting them from the cold and bringing comfort, care, and warmth when they need it most.</p>
+                    <button class="category">Blanket Distribution</button>
+                </div>
+
+                <div class="campaign7">
+                    <div class="image">
+                        <img src="./Images/Educating-about-hygiene.JPG"
+                        alt="Blanket-distribution.png"
+                        loading="lazy" class="poster">
+                        <div class="overlay">
+                            <a href="/Donation"><span>Donate Now</span></a>
+                        </div>
+                    </div>
+                    <p class="heading-campaigns-homepage-grid">Empowering Girls Through Hygiene</p>
+                    <p class="description-campaigns-homepage-grid">Your support helps provide sanitary pads to girls and women in need, promoting hygiene, dignity, confidence, and healthier everyday lives.</p>
+                    <button class="category">Sanitary Pad Distribution</button>
+                </div>
+
+
                 
             </div>
             
         </section>
-        <section id="donation-lower-part"> 
-            <div id="donation-lower-part-img"> 
-                <img src="./Images/Donation-page-lower.png" alt="quote.jpeg" loading="lazy">
-
-                <div class="lower-wave">
-                    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-                        <path d="M0,0
-                            L1440,0
-                            L1440,45
-                            C1250,20 1120,70 950,65
-                            C750,60 650,25 480,45
-                            C300,70 180,25 0,50
-                            Z">
-                        </path>
-                    </svg>
-                </div>
-
-            </div> 
-        </section>  
     </main>
     <footer>
         <div class="top-footer">
@@ -232,5 +275,7 @@
             <p><i class="ri-copyright-line"></i>2026 Samarpan Trust All rights reserved.</p>
         </div>
     </footer>
+    <script src="campaigns-script.js"></script>
 </body>
+
 </html>

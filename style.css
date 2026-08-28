@@ -871,6 +871,9 @@ img
     background-color: orangered;
     color: white;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .how-you-can-help
 {
@@ -1332,6 +1335,1398 @@ footer
 .subsection-description,
 .description-header-leftside-top p {
     max-width: 65ch;
+}
+/* =========================================================
+   RESPONSIVE OVERRIDE
+   KEEP ORIGINAL DESKTOP DESIGN
+========================================================= */
+
+
+/* =========================================================
+   HAMBURGER - HIDDEN ON DESKTOP
+========================================================= */
+
+.hamburger {
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: transparent;
+
+    color: #370F2D;
+
+    cursor: pointer;
+
+    font-size: 1.8rem;
+
+    padding: 0.3rem;
+
+    flex-shrink: 0;
+
+    z-index: 10001;
+}
+
+
+/* =========================================================
+   TABLET
+   iPad / iPad Air / iPad Pro / Surface
+========================================================= */
+
+@media screen and (max-width: 1100px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    nav {
+        width: 100%;
+        height: 70px;
+
+        padding: 0 1rem;
+
+        margin-top: 0;
+
+        box-sizing: border-box;
+    }
+
+    .information {
+        height: 70px;
+
+        gap: 0.6rem;
+
+        min-width: 0;
+    }
+
+    #logo img {
+        height: 50px;
+        width: auto;
+    }
+
+    #name h1 {
+        font-size: 2rem;
+
+        white-space: nowrap;
+    }
+
+
+    /* DONATE ALWAYS VISIBLE */
+
+    .rightside-nav {
+        display: flex;
+
+        align-items: center;
+
+        margin-left: auto;
+
+        flex-shrink: 0;
+    }
+
+    .rightside-nav button {
+        display: flex;
+
+        white-space: nowrap;
+
+        font-size: 0.9rem;
+
+        padding: 0.6rem 0.8rem;
+    }
+
+
+    /* HAMBURGER VISIBLE */
+
+    .hamburger {
+        display: flex;
+
+        width: 42px;
+        height: 42px;
+
+        margin-left: 0.5rem;
+    }
+
+
+    /* =========================
+       MOBILE NAV MENU
+    ========================= */
+
+    .center-nav {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        z-index: 10000;
+
+        box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+
+        padding: 0;
+    }
+
+    .center-nav.active {
+        display: block;
+    }
+
+    .center-nav ul {
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 0;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .center-nav ul li {
+        width: 100%;
+    }
+
+    .center-nav ul li a {
+        display: block;
+
+        width: 100%;
+
+        padding: 1rem;
+
+        text-align: center;
+
+        box-sizing: border-box;
+
+        transform: none !important;
+    }
+
+    .center-nav ul li a:hover {
+        transform: none !important;
+    }
+
+    .center-nav ul li a::after {
+        display: none;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .container {
+
+        width: calc(100% - 2rem);
+
+        margin: 1rem;
+
+        min-width: 0;
+
+        overflow: hidden;
+    }
+
+    .leftpart-container {
+        min-width: 0;
+
+        width: 55%;
+    }
+
+    .rightpart-container {
+        min-width: 0;
+
+        width: 45%;
+
+        gap: 0.8rem;
+
+        overflow: hidden;
+    }
+
+
+    /* HERO HEADING */
+
+    #tagline {
+
+        width: 100%;
+
+        padding-left: 1.2rem;
+        padding-top: 4rem;
+
+        font-size: clamp(2.5rem, 5vw, 4rem);
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* LOWER HERO CONTENT */
+
+    .lowerpart-leftpart-container {
+
+        gap: 1.5rem;
+
+        flex-wrap: wrap;
+    }
+
+    .leftside-leftpart-container {
+
+        padding-left: 1.3rem;
+    }
+
+    #donation-received {
+
+        margin-top: 3rem;
+
+        font-size: 1.8rem;
+    }
+
+    #people {
+
+        font-size: 1rem;
+    }
+
+    .rightside-leftpart-container {
+
+        min-width: 0;
+
+        margin-bottom: 3rem;
+    }
+
+    #subtagline {
+
+        margin: 2rem 0 1.5rem 0;
+
+        padding-left: 0;
+
+        width: 100%;
+
+        font-size: 1rem;
+
+        line-height: 1.5;
+    }
+
+    #donate-now,
+    #get-involved {
+
+        margin-left: 0;
+
+        font-size: 1rem;
+
+        padding: 0.65rem 0.9rem;
+    }
+
+
+    /* HERO IMAGES */
+
+    #center-img {
+
+        width: 48%;
+
+        height: 300px;
+
+        max-height: 300px;
+
+        object-fit: cover;
+
+        flex-shrink: 1;
+    }
+
+    #end-img {
+
+        width: 48%;
+
+        height: 380px;
+
+        max-height: 380px;
+
+        object-fit: cover;
+
+        flex-shrink: 1;
+    }
+
+
+    /* =====================================================
+       ABOUT
+    ===================================================== */
+
+    .about {
+
+        gap: 3rem;
+
+        padding: 0 1rem;
+
+        min-width: 0;
+
+        overflow: hidden;
+    }
+
+    .leftside-about {
+
+        width: 20%;
+
+        padding-left: 0;
+
+        margin: 4rem 0;
+
+        flex-shrink: 0;
+    }
+
+    .rightside-about {
+
+        width: 80%;
+
+        min-width: 0;
+
+        margin: 4rem 0;
+
+        font-size: 2.2rem;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* =====================================================
+       SUMMARIZE
+    ===================================================== */
+
+    .summarize {
+
+        gap: 2rem;
+
+        margin: 1rem;
+
+        min-width: 0;
+
+        overflow: hidden;
+    }
+
+    .leftpart-summarize {
+
+        width: 70%;
+
+        min-width: 0;
+    }
+
+    .upper {
+
+        width: 100%;
+
+        padding-left: 1rem;
+
+        font-size: 2.7rem;
+
+        overflow-wrap: break-word;
+    }
+
+    .info-summarize1,
+    .info-summarize2,
+    .info-summarize3 {
+
+        margin-left: 1rem;
+    }
+
+
+    /* =====================================================
+       WHAT WE DO
+    ===================================================== */
+
+    #moto {
+
+        width: 80%;
+
+        font-size: 2.5rem;
+    }
+
+    .impact-we-create {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        margin: 2rem;
+
+        gap: 1.5rem;
+    }
+
+    .impact5 {
+
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       WHY CHOOSE US
+    ===================================================== */
+
+    .why-choose-us {
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(260px, 0.7fr);
+
+        gap: 1.5rem;
+
+        padding: 1.5rem;
+
+        min-width: 0;
+
+        overflow: hidden;
+    }
+
+    #title-why-choose-us {
+
+        font-size: 2.7rem;
+    }
+
+    #description-why-choose-us {
+
+        font-size: 1rem;
+    }
+
+    .rightpart-why-choose-us img {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: auto;
+    }
+
+
+    /* =====================================================
+       CAMPAIGNS
+    ===================================================== */
+
+    #header-campaigns-homepage {
+
+        width: 90%;
+
+        padding: 3rem 1rem 1rem;
+
+        font-size: 2.7rem;
+    }
+
+    .campaigns-homepage-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        padding: 0 1rem;
+
+        gap: 1.2rem;
+    }
+
+
+    /* =====================================================
+       HOW YOU CAN HELP
+    ===================================================== */
+
+    .heading-how-you-can-help {
+
+        font-size: 2.7rem;
+
+        padding: 3rem 2rem 0;
+    }
+
+    .subsection-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        padding: 2rem;
+    }
+
+
+    /* =====================================================
+       VOLUNTEER
+    ===================================================== */
+
+    .become-volunteer {
+
+        padding: 3rem 2rem;
+
+        gap: 2rem;
+
+        min-width: 0;
+
+        overflow: hidden;
+    }
+
+    .leftpart-become-volunteer,
+    .rightpart-become-volunteer {
+
+        width: 50%;
+
+        min-width: 0;
+    }
+
+    #heading-leftpart-become-volunteer {
+
+        font-size: 2.7rem;
+    }
+
+    .benefits-card {
+
+        grid-template-columns:
+            minmax(130px, 0.8fr)
+            minmax(0, 1fr);
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .top-footer {
+
+        gap: 1rem;
+
+        margin: 0;
+    }
+
+    .leftside-top,
+    .rightside-top {
+
+        width: 50%;
+
+        padding: 3rem 2rem;
+
+        min-width: 0;
+    }
+
+    .title-header-leftside-top p {
+
+        font-size: 2rem;
+    }
+
+    .description-header-leftside-top {
+
+        font-size: 1rem;
+    }
+
+    .middle-footer {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 0;
+
+        margin: 1rem;
+    }
+
+    .quick-links,
+    .account,
+    .platform,
+    .location {
+
+        min-width: 0;
+
+        padding: 2.5rem 1.5rem;
+    }
+
+    .address,
+    .mail-id {
+
+        min-width: 0;
+
+        overflow-wrap: anywhere;
+    }
+
+    .mail-id a {
+
+        overflow-wrap: anywhere;
+
+        word-break: break-word;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width: 767px) {
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    nav {
+
+        height: 64px;
+
+        padding: 0 0.7rem;
+
+        margin-top: 0;
+    }
+
+    .information {
+
+        height: 64px;
+
+        gap: 0.4rem;
+
+        min-width: 0;
+    }
+
+    #logo img {
+
+        height: 42px;
+    }
+
+    #name h1 {
+
+        font-size: 1.5rem;
+
+        white-space: nowrap;
+    }
+
+    .rightside-nav {
+
+        margin-left: auto;
+
+        flex-shrink: 0;
+    }
+
+    .rightside-nav button {
+
+        font-size: 0.7rem;
+
+        padding: 0.5rem 0.65rem;
+    }
+
+    .hamburger {
+
+        display: flex;
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 1.6rem;
+
+        margin-left: 0.2rem;
+    }
+
+
+    /* MENU */
+
+    .center-nav {
+
+        top: 64px;
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    /*
+       IMPORTANT:
+       On phones the original desktop hero cannot fit because
+       it contains a large heading + text + TWO images.
+       We stack them instead of allowing horizontal overflow.
+    */
+
+    .container {
+
+        width: calc(100% - 1rem);
+
+        margin: 0.5rem;
+
+        display: flex;
+
+        flex-direction: column;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+    }
+
+    .leftpart-container {
+
+        width: 100%;
+
+        min-width: 0;
+    }
+
+    #tagline {
+
+        width: 100%;
+
+        padding: 2.5rem 1rem 0;
+
+        font-size: clamp(2.2rem, 10vw, 3rem);
+
+        line-height: 1.05;
+
+        box-sizing: border-box;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* HERO LOWER CONTENT */
+
+    .lowerpart-leftpart-container {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        width: 100%;
+    }
+
+    .leftside-leftpart-container {
+
+        padding-left: 1rem;
+    }
+
+    #donation-received {
+
+        margin-top: 2rem;
+
+        font-size: 1.8rem;
+    }
+
+    #people {
+
+        font-size: 1rem;
+    }
+
+    .rightside-leftpart-container {
+
+        width: 100%;
+
+        margin-bottom: 2rem;
+
+        padding: 0 1rem;
+
+        box-sizing: border-box;
+    }
+
+    #subtagline {
+
+        width: 100%;
+
+        margin: 1rem 0;
+
+        padding: 0;
+
+        font-size: 0.95rem;
+
+        line-height: 1.5;
+    }
+
+    #donate-now,
+    #get-involved {
+
+        margin-left: 0;
+
+        font-size: 0.9rem;
+
+        padding: 0.65rem 0.9rem;
+    }
+
+
+    /* HERO IMAGES */
+
+    .rightpart-container {
+
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: flex-start;
+
+        gap: 0.5rem;
+
+        padding: 0 0.7rem 1rem;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+    #center-img {
+
+        width: 48%;
+
+        max-width: 48%;
+
+        height: 260px;
+
+        max-height: 260px;
+
+        object-fit: cover;
+
+        flex-shrink: 1;
+    }
+
+    #end-img {
+
+        width: 48%;
+
+        max-width: 48%;
+
+        height: 300px;
+
+        max-height: 300px;
+
+        object-fit: cover;
+
+        flex-shrink: 1;
+    }
+
+
+    /* =====================================================
+       ABOUT
+    ===================================================== */
+
+    .about {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        padding: 0 1rem;
+
+        overflow: hidden;
+    }
+
+    .leftside-about {
+
+        width: 100%;
+
+        margin: 2rem 0 0;
+
+        padding-left: 0;
+    }
+
+    .rightside-about {
+
+        width: 100%;
+
+        margin: 1rem 0 3rem;
+
+        font-size: 1.7rem;
+
+        line-height: 1.3;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* =====================================================
+       SUMMARY
+    ===================================================== */
+
+    .summarize {
+
+        display: block;
+
+        margin: 0.5rem;
+
+        padding: 0;
+
+        overflow: hidden;
+    }
+
+    .leftpart-summarize {
+
+        width: 100%;
+
+        margin: 3rem 0;
+
+        padding: 0;
+
+        box-sizing: border-box;
+    }
+
+    .upper {
+
+        width: 100%;
+
+        padding: 0 1rem;
+
+        font-size: 2.2rem;
+
+        box-sizing: border-box;
+    }
+
+    .info-summarize1,
+    .info-summarize2,
+    .info-summarize3 {
+
+        margin: 1.5rem 1rem;
+
+        padding: 1rem;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0.7rem;
+    }
+
+    .leftpart,
+    .rightpart {
+
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       WHAT WE DO
+    ===================================================== */
+
+    .what-we-do {
+
+        margin: 1rem 0.5rem;
+
+        overflow: hidden;
+    }
+
+    #moto {
+
+        width: 90%;
+
+        font-size: 2rem;
+
+        margin-top: 2rem;
+    }
+
+    .impact-we-create {
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        width: calc(100% - 2rem);
+
+        margin: 1rem;
+
+        gap: 1rem;
+    }
+
+    .impact5 {
+
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       WHY CHOOSE US
+    ===================================================== */
+
+    .why-choose-us {
+
+        display: flex;
+
+        flex-direction: column;
+
+        width: calc(100% - 1rem);
+
+        margin: 1rem 0.5rem;
+
+        padding: 1rem;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+    #title-why-choose-us {
+
+        font-size: 2.2rem;
+
+        line-height: 1.15;
+    }
+
+    #description-why-choose-us {
+
+        font-size: 0.95rem;
+    }
+
+    .rightpart-why-choose-us {
+
+        width: 100%;
+    }
+
+    .rightpart-why-choose-us img {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: auto;
+
+        margin-top: 1rem;
+    }
+
+
+    /* =====================================================
+       CAMPAIGNS
+    ===================================================== */
+
+    .campaigns-homepage {
+
+        margin: 1rem 0.5rem;
+
+        overflow: hidden;
+    }
+
+    #header-campaigns-homepage {
+
+        width: 100%;
+
+        padding: 2.5rem 1rem 1rem;
+
+        font-size: 2.2rem;
+
+        box-sizing: border-box;
+    }
+
+    .campaigns-homepage-grid {
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        width: calc(100% - 2rem);
+
+        margin: 1rem;
+
+        gap: 1rem;
+    }
+
+    .campaign1,
+    .campaign2,
+    .campaign3 {
+
+        width: 100%;
+
+        min-width: 0;
+    }
+
+
+    /* =====================================================
+       HOW YOU CAN HELP
+    ===================================================== */
+
+    .how-you-can-help {
+
+        margin: 1rem 0.5rem;
+
+        overflow: hidden;
+    }
+
+    .heading-how-you-can-help {
+
+        font-size: 2.2rem;
+
+        padding: 2.5rem 1rem 0;
+    }
+
+    .subsection-grid {
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        padding: 1rem;
+
+        gap: 1rem;
+    }
+
+    .subsection-1,
+    .subsection-2 {
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        margin-bottom: 1rem;
+    }
+
+
+    /* =====================================================
+       NEWS
+    ===================================================== */
+
+    .news-appearance {
+
+        margin: 1rem 0.5rem;
+
+        overflow: hidden;
+    }
+
+    #heading-news-appearance {
+
+        font-size: 2.2rem;
+
+        padding: 2.5rem 1rem 0;
+    }
+
+    .news-icon {
+
+        padding: 1.5rem 1rem;
+
+        overflow: hidden;
+    }
+
+    .news-track {
+
+        gap: 1.5rem;
+    }
+
+    .logo-card {
+
+        min-width: 180px;
+
+        height: 100px;
+    }
+
+
+    /* =====================================================
+       VOLUNTEER
+    ===================================================== */
+
+    .become-volunteer {
+
+        display: flex;
+
+        flex-direction: column;
+
+        margin: 1rem 0.5rem 0;
+
+        padding: 2rem 1rem;
+
+        gap: 2rem;
+
+        overflow: hidden;
+    }
+
+    .rightpart-become-volunteer,
+    .leftpart-become-volunteer {
+
+        width: 100%;
+
+        min-width: 0;
+    }
+
+    .rightpart-become-volunteer {
+
+        order: 1;
+    }
+
+    .leftpart-become-volunteer {
+
+        order: 2;
+    }
+
+    .rightpart-become-volunteer img {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: auto;
+
+        object-fit: cover;
+    }
+
+    #heading-leftpart-become-volunteer {
+
+        font-size: 2.2rem;
+
+        line-height: 1.2;
+    }
+
+    #tagline-heading-leftpart-become-volunteer {
+
+        font-size: 1.1rem;
+    }
+
+    .benefits-card {
+
+        grid-template-columns: 1fr;
+
+        gap: 0.5rem;
+    }
+
+    .benefits-card p:first-child {
+
+        padding-right: 0;
+
+        padding-bottom: 0.5rem;
+    }
+
+    .benefits-card p:first-child::after {
+
+        display: none;
+    }
+
+    .benefits-card p:last-child {
+
+        padding-left: 0;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .top-footer {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        margin: 0;
+    }
+
+    .leftside-top,
+    .rightside-top {
+
+        width: 100%;
+
+        padding: 2.5rem 1.5rem;
+
+        box-sizing: border-box;
+    }
+
+    .title-header-leftside-top p {
+
+        font-size: 1.8rem;
+    }
+
+    .description-header-leftside-top {
+
+        font-size: 0.9rem;
+    }
+
+    .middle-footer {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 0;
+
+        margin: 0;
+    }
+
+    .quick-links,
+    .account,
+    .platform,
+    .location {
+
+        min-width: 0;
+
+        padding: 2rem 1rem;
+
+        box-sizing: border-box;
+    }
+
+    .quick-links a,
+    .account a,
+    .platform a {
+
+        font-size: 0.9rem;
+
+        overflow-wrap: anywhere;
+    }
+
+    .location {
+
+        grid-column: 1 / -1;
+    }
+
+    .address,
+    .mail-id {
+
+        min-width: 0;
+
+        align-items: flex-start;
+
+        overflow-wrap: anywhere;
+    }
+
+    #address-details,
+    .mail-id a {
+
+        overflow-wrap: anywhere;
+
+        word-break: break-word;
+
+        font-size: 0.85rem;
+    }
+
+    .bottom-footer {
+
+        font-size: 0.8rem;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media screen and (max-width: 380px) {
+
+    #name h1 {
+        font-size: 1.3rem;
+    }
+
+    .rightside-nav button {
+
+        font-size: 0.62rem;
+
+        padding: 0.45rem 0.5rem;
+    }
+
+    .hamburger {
+
+        width: 34px;
+        height: 34px;
+
+        font-size: 1.4rem;
+    }
+
+    #tagline {
+
+        font-size: 2rem;
+    }
+
+    #center-img {
+
+        height: 220px;
+    }
+
+    #end-img {
+
+        height: 260px;
+    }
 }
 
 

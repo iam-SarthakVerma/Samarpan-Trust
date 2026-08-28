@@ -1,0 +1,1968 @@
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Playfair Display */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body
+{
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+}
+html
+{
+    scroll-behavior: smooth;
+    scrollbar-gutter: auto;
+}
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+nav
+{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+    margin-top: 1rem;
+
+
+}
+
+.information
+{
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 80px;
+
+
+}
+img
+{
+    display: block;
+}
+#logo img
+{
+    width: auto;
+    height: 60px;
+    border-radius: 50%;
+
+
+}
+#name h1
+{
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 0.85;
+    font-family: "Playfair Display", serif;
+
+
+
+
+}
+.center-nav{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+}
+
+.center-nav ul
+{
+
+
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+
+}
+.center-nav ul li a{
+
+
+    position: relative;
+    display: inline-block;
+    padding: 8px 0;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+
+.center-nav ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background-color: orangered;
+    transition: width 0.25s ease-in-out;
+
+}
+
+.center-nav ul li a:hover{
+    transform: translateY(-6px);
+    color: #370F2D;
+}
+
+.center-nav ul li a:hover::after{
+    width: 100%;
+}
+
+ul
+{
+    list-style-type: none;
+}
+.rightside-nav
+{
+    display: flex;
+    align-items: center;
+}
+.rightside-nav button
+{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 0.7rem 1.2rem;
+   font-size: 1.2rem;
+   background-color: orangered;
+   color: white;
+   border: none;
+   cursor: pointer;
+   border-radius: 10px;
+   font-family: 'Poppins', sans-serif;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+ul a
+{
+    color: #6A3556;
+}
+
+#name a
+{
+    color: #6A3556;
+}
+
+/* ============ HERO / CAMPAIGNS SECTION ============ */
+
+#campaigns-container
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #ffefdd;
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 3rem 4rem;
+    gap: 2rem;
+    min-height: 480px;
+    overflow: hidden;
+    justify-content: space-around;
+}
+
+#campaigns-container-leftpart
+{
+    width: 40%;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#campaigns-container-leftpart-header
+{
+    font-size: 4rem;
+    font-family: "Playfair Display", serif;
+    color: #8e2273;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    
+}
+#campaigns-container-leftpart-header-orange
+{
+    color: orangered;
+    font-style: italic;
+}
+
+#campaigns-container-leftpart-subheader
+{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #8e2273;
+}
+#campaigns-container-leftpart-heading-lower-description
+{
+    font-size: 1.2rem;
+    width: 85%;
+    color: #501e3c;
+}
+
+/* CTA button */
+.hero-cta
+{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: fit-content;
+    margin-top: 0.4rem;
+    padding: 0.85rem 1.6rem;
+    background-color: orangered;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px -8px rgba(255, 69, 0, 0.55);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-cta i
+{
+    font-size: 1.05rem;
+    transition: transform 0.25s ease;
+}
+
+.hero-cta:hover
+{
+    transform: translateY(-3px);
+    box-shadow: 0 14px 24px -8px rgba(255, 69, 0, 0.65);
+}
+
+.hero-cta:hover i
+{
+    transform: translateX(4px);
+}
+
+/* Decorative dotted path + heart, arcing from the button up to the oval */
+.hero-decor-path
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-decor-path path
+{
+    fill: none;
+    stroke: orangered;
+    stroke-width: 5px;
+    stroke-linecap: round;
+    stroke-dasharray: 1 16;
+    vector-effect: non-scaling-stroke;
+}
+
+.hero-decor-heart
+{
+    position: absolute;
+    color: orangered;
+    font-size: 1.7rem;
+    z-index: 2;
+}
+
+/* Right part: a full rounded oval photo, floating with breathing
+   room on every side (not bleeding to the edges). */
+#campaigns-container-rightpart
+{
+    position: relative;
+    width: 44%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+#campaigns-container-rightpart>img
+{
+    width: 100%;
+    max-width: 520px;
+    height: 420px;
+    display: block;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 50%;
+    box-shadow: 0 25px 50px -25px rgba(75, 29, 64, 0.45);
+}
+
+.hero-decor-squiggle
+{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    width: 64px;
+    height: 44px;
+    color: orangered;
+    z-index: 3;
+}
+
+#header-campaigns-homepage
+{
+    font-size: 3.5rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    color: #370F2D;
+    text-align: center;
+    width:75%;
+    padding: 4rem 3.5rem 2rem 3.5rem;
+    margin: 0 auto; 
+    
+}
+#header-campaigns-homepage span
+{
+    font-style: italic;
+    color: orangered;
+    
+}
+.campaign1,.campaign2,.campaign3,.campaign4,.campaign5,.campaign6,.campaign7
+{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    
+    background-color: #F6EEF2;
+}
+.campaigns-homepage-grid
+{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(320px,380px));
+    justify-content: center;
+    margin: 2rem 0rem;
+    
+    
+}
+.poster
+{
+    
+    width:100%;
+    object-fit: cover;
+    height: 100%;
+    display: block;
+    
+    
+}
+.image{
+    position: relative;
+    aspect-ratio: 15 / 12;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+
+.image:hover img
+{
+    transform: scale(1.1);
+    transition-duration: 200ms;
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.image img{
+    transition: transform 0.4s ease;
+}
+
+.image:hover img{
+    transform: scale(1.1);
+}
+
+.image:hover .overlay{
+    opacity: 1;
+}
+.image span
+{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+}
+.heading-campaigns-homepage-grid
+{
+    
+    font-size: 1.23rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    padding:0 1rem;
+    color: #370F2D;
+}
+.description-campaigns-homepage-grid
+{
+    font-size: 0.9em;
+    font-weight: 500;
+    padding:1rem;
+    flex: 1;
+    margin-bottom: 2rem;
+    color: #551c47ca;
+    
+}
+.category
+{
+    font-size: 1rem;
+    width: fit-content;
+    position: absolute;
+    bottom: 12px;    
+    right: 12px;
+    padding: 0.4rem;
+    cursor: pointer;
+    background-color: orangered;
+    color: white; 
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+      
+}
+#all-campaigns
+{
+    width: fit-content;
+    padding: 0.4rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    cursor: pointer;
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+}
+
+footer
+{
+    background:#0F3057;
+    color:#EAF4FF;
+}
+.top-footer
+{
+    margin:0 1rem;
+    display: flex;
+    gap: 2rem;
+    
+    border-bottom: 1px solid #EAF4FF;
+    /* background-color: rgba(55, 15, 45, 0.14);
+    border-radius: 8px; */
+}
+.leftside-top
+{
+    display:flex ;
+    flex-direction: column;
+    padding: 5rem 4rem;
+    width: 50%;
+    border: none;
+}
+
+.header-leftside-top
+{
+    display: flex;
+    gap: 1rem;
+    
+    
+    
+}
+.icon-header-leftside-top img
+{
+    width: auto;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.title-header-leftside-top p
+{
+    font-size: 2.4rem;
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+}
+
+.description-header-leftside-top
+{
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    width: 100%;
+}
+.social-media
+{
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+#facebook,#instagram,#x,#youtube
+{
+    border: 1px solid #EAF4FF;
+    border-radius: 50%;
+    padding: 0.4rem 0.7rem;
+    
+}
+#facebook>a,#instagram>a,#x>a,#youtube>a
+{
+    color:#EAF4FF;
+}
+#facebook,
+#instagram,
+#x,
+#youtube{
+    transition: transform 0.8s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+#facebook:hover,
+#instagram:hover,
+#x:hover,
+#youtube:hover{
+    transform: rotate(360deg) scale(1.15);
+    background-color: orangered;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+#facebook:hover a,
+#instagram:hover a,
+#x:hover a,
+#youtube:hover a{
+    color: white;
+}
+
+.rightside-top
+{
+    width: 50%;
+    padding: 5rem 4rem;
+    
+}
+.header-rightside-top p
+{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+}
+.newsletter
+{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+#mail-for-subscribe
+{
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 0.4rem 2rem;
+    border-radius: 5px;
+    flex: 1;
+}
+#subscribe-button
+{
+    padding: 0.5rem 2rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    background-color: orangered;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.middle-footer
+{
+    margin: 1rem;
+    display: flex;
+    gap: 2rem;
+    border-bottom: 1px solid #EAF4FF;
+}
+.quick-links,.account,.platform,.location
+{
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 4rem;
+    gap: 1rem;
+}
+
+.quick-links p,.account p,.platform p,.location span
+{
+    
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: "Playfair Display", serif;
+}
+.quick-links a,.account a,.platform a
+{
+    font-size: 1.1rem;
+    
+    color:#a1a2a4;
+}
+.address
+{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    color:#a1a2a4;
+    
+
+}
+#heading-address,.mail-id>p
+{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.mail-id
+{
+    display: flex;
+    gap: 1rem;
+    color:#a1a2a4;
+}
+.mail-id a
+{
+    text-decoration: none;
+    color:#a1a2a4;
+    
+    font-weight: 500;
+    
+    
+    
+}
+.bottom-footer
+{
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem;
+    
+}
+
+/* Improve text readability on large screens */
+.rightside-about p,
+#subtagline,
+.description-campaigns-homepage-grid,
+.description-header-why-choose-us,
+.subsection-description,
+.description-header-leftside-top p {
+    max-width: 65ch;
+}
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+
+.hamburger {
+    display: none;
+    border: none;
+    background: transparent;
+    color: #6A3556;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.3rem;
+    line-height: 1;
+}
+/* =========================================================
+   RESPONSIVE NAVBAR + HAMBURGER
+   ========================================================= */
+
+/* ---------------- DESKTOP ---------------- */
+
+.hamburger {
+    display: none;
+}
+
+
+/* =========================================================
+   TABLETS
+   iPad Mini / iPad Air / Surface / smaller laptops
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    nav {
+        position: relative;
+
+        height: 75px;
+
+        padding: 0 1.5rem;
+
+        margin-top: 0.5rem;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .information {
+        height: 70px;
+        gap: 0.7rem;
+    }
+
+    #logo img {
+        height: 52px;
+    }
+
+    #name h1 {
+        font-size: 2rem;
+    }
+
+    /* Donate ALWAYS visible */
+    .rightside-nav {
+        display: flex;
+        align-items: center;
+
+        margin-left: auto;
+        margin-right: 0.5rem;
+    }
+
+    .rightside-nav button {
+        font-size: 1rem;
+        padding: 0.65rem 1rem;
+        white-space: nowrap;
+    }
+
+    /* Hamburger */
+    .hamburger {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border: none;
+        background: transparent;
+
+        color: #6A3556;
+
+        font-size: 2rem;
+
+        cursor: pointer;
+
+        padding: 0.3rem;
+
+        line-height: 1;
+
+        z-index: 1001;
+    }
+
+    /* Hide normal menu */
+    .center-nav {
+        display: none;
+    }
+
+    /* Show menu when hamburger clicked */
+    .center-nav.active {
+        display: block;
+
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        padding: 1rem 0;
+
+        box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+        z-index: 1000;
+    }
+
+    .center-nav.active ul {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        width: 100%;
+
+        align-items: center;
+    }
+
+    .center-nav.active ul li {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .center-nav.active ul li a {
+        display: block;
+
+        width: 100%;
+
+        padding: 0.9rem;
+
+        font-size: 1rem;
+    }
+
+
+    /* =====================================================
+       CAMPAIGN HERO
+       ===================================================== */
+
+    #campaigns-container {
+        width: 100%;
+
+        padding: 3rem 2rem;
+
+        gap: 2rem;
+
+        overflow: hidden;
+    }
+
+    #campaigns-container-leftpart {
+        width: 48%;
+
+        min-width: 0;
+
+        padding-top: 1rem;
+    }
+
+    #campaigns-container-leftpart-header {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+
+        line-height: 1.1;
+
+        overflow-wrap: break-word;
+    }
+
+    #campaigns-container-leftpart-subheader {
+        font-size: clamp(1rem, 2vw, 1.4rem);
+
+        line-height: 1.5;
+    }
+
+    #campaigns-container-leftpart-heading-lower-description {
+        width: 100%;
+
+        font-size: 1rem;
+
+        line-height: 1.6;
+    }
+
+    #campaigns-container-rightpart {
+        width: 48%;
+
+        min-width: 0;
+    }
+
+    #campaigns-container-rightpart > img {
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 1.2 / 1;
+
+        object-fit: cover;
+    }
+
+
+    /* =====================================================
+       CAMPAIGN GRID
+       ===================================================== */
+
+    .campaigns-homepage-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 1.5rem;
+
+        padding: 0 1.5rem;
+    }
+
+    .campaign1,
+    .campaign2,
+    .campaign3,
+    .campaign4,
+    .campaign5,
+    .campaign6,
+    .campaign7 {
+        min-width: 0;
+    }
+
+    .heading-campaigns-homepage-grid {
+        font-size: 1.1rem;
+
+        overflow-wrap: break-word;
+    }
+
+    .description-campaigns-homepage-grid {
+        font-size: 0.9rem;
+
+        line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    .top-footer {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        margin: 0;
+    }
+
+    .leftside-top,
+    .rightside-top {
+        width: 100%;
+
+        padding: 3rem 2rem;
+    }
+
+    .middle-footer {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 1rem;
+
+        margin: 0;
+
+        padding: 1rem;
+    }
+
+    .quick-links,
+    .account,
+    .platform,
+    .location {
+        padding: 2rem 1rem;
+
+        min-width: 0;
+    }
+
+    .address,
+    .mail-id {
+        display: flex;
+
+        gap: 0.7rem;
+
+        min-width: 0;
+    }
+
+    #address-details,
+    .mail-id a {
+        overflow-wrap: anywhere;
+
+        word-break: break-word;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* ---------------- NAVBAR ---------------- */
+
+    nav {
+        height: 70px;
+
+        padding: 0 0.8rem;
+
+        margin-top: 0;
+    }
+
+    .information {
+        gap: 0.5rem;
+
+        height: 65px;
+
+        min-width: 0;
+    }
+
+    #logo img {
+        width: 48px;
+
+        height: 48px;
+    }
+
+    #name h1 {
+        font-size: 1.8rem;
+
+        white-space: nowrap;
+    }
+
+    /* Donate stays visible */
+    .rightside-nav {
+        display: flex;
+
+        margin-left: auto;
+
+        margin-right: 0.2rem;
+    }
+
+    .rightside-nav button {
+        font-size: 0.85rem;
+
+        padding: 0.6rem 0.8rem;
+
+        border-radius: 8px;
+    }
+
+    /* Hamburger */
+    .hamburger {
+        display: flex;
+
+        font-size: 1.9rem;
+
+        flex-shrink: 0;
+    }
+
+
+    /* ---------------- MOBILE MENU ---------------- */
+
+    .center-nav {
+        display: none;
+    }
+
+    .center-nav.active {
+        display: block;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        padding: 0.5rem 0;
+
+        box-shadow:
+            0 8px 20px rgba(0,0,0,0.15);
+
+        z-index: 9999;
+    }
+
+    .center-nav.active ul {
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 0;
+    }
+
+    .center-nav.active ul li {
+        width: 100%;
+    }
+
+    .center-nav.active ul li a {
+        display: block;
+
+        width: 100%;
+
+        padding: 0.85rem 1rem;
+
+        text-align: center;
+
+        font-size: 1rem;
+    }
+
+
+    /* =====================================================
+       CAMPAIGN HERO
+       ===================================================== */
+
+    #campaigns-container {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        padding: 2rem 1rem;
+
+        margin-top: 1rem;
+
+        gap: 1.5rem;
+
+        overflow: hidden;
+
+        min-height: auto;
+    }
+
+    #campaigns-container-leftpart {
+        width: 100%;
+
+        padding-top: 0;
+
+        gap: 0.8rem;
+
+        min-width: 0;
+    }
+
+    #campaigns-container-leftpart-header {
+        width: 100%;
+
+        font-size: clamp(2.2rem, 10vw, 3rem);
+
+        line-height: 1.1;
+
+        padding-bottom: 0.5rem;
+
+        overflow-wrap: break-word;
+    }
+
+    #campaigns-container-leftpart-subheader {
+        width: 100%;
+
+        font-size: 1rem;
+
+        line-height: 1.5;
+    }
+
+    #campaigns-container-leftpart-heading-lower-description {
+        width: 100%;
+
+        font-size: 0.9rem;
+
+        line-height: 1.6;
+    }
+
+    .hero-cta {
+        font-size: 0.9rem;
+
+        padding: 0.75rem 1.2rem;
+
+        margin-top: 0.3rem;
+    }
+
+
+    /* ---------------- HERO IMAGE ---------------- */
+
+    #campaigns-container-rightpart {
+        width: 100%;
+
+        min-width: 0;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+    }
+
+    #campaigns-container-rightpart > img {
+        width: 100%;
+
+        max-width: 500px;
+
+        height: auto;
+
+        aspect-ratio: 1.25 / 1;
+
+        object-fit: cover;
+
+        border-radius: 30px;
+    }
+
+
+    /* ---------------- DECORATION ---------------- */
+
+    /*
+       Keep decorative elements from creating
+       horizontal overflow.
+    */
+
+    .hero-decor-heart {
+        font-size: 1.3rem;
+    }
+
+    .hero-decor-squiggle {
+        width: 45px;
+
+        height: 35px;
+
+        right: 0.5rem;
+
+        top: 0.5rem;
+    }
+
+
+    /* =====================================================
+       CAMPAIGN HEADING
+       ===================================================== */
+
+    #header-campaigns-homepage {
+        width: 100%;
+
+        font-size: 2rem;
+
+        line-height: 1.25;
+
+        padding: 3rem 1rem 1.5rem;
+    }
+
+
+    /* =====================================================
+       CAMPAIGN CARDS
+       ===================================================== */
+
+    .campaigns-homepage-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 1.5rem;
+
+        width: 100%;
+
+        padding: 0 0.8rem;
+
+        margin: 1.5rem 0;
+    }
+
+    .campaign1,
+    .campaign2,
+    .campaign3,
+    .campaign4,
+    .campaign5,
+    .campaign6,
+    .campaign7 {
+        width: 100%;
+
+        min-width: 0;
+    }
+
+    .image {
+        width: 100%;
+
+        aspect-ratio: 4 / 3;
+
+        padding: 0.7rem;
+    }
+
+    .poster {
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    .heading-campaigns-homepage-grid {
+        font-size: 1.15rem;
+
+        line-height: 1.4;
+
+        padding: 0 0.8rem;
+    }
+
+    .description-campaigns-homepage-grid {
+        font-size: 0.9rem;
+
+        line-height: 1.6;
+
+        padding: 0.8rem;
+
+        margin-bottom: 2.5rem;
+    }
+
+    .category {
+        font-size: 0.8rem;
+
+        bottom: 10px;
+
+        right: 10px;
+
+        padding: 0.4rem 0.6rem;
+
+        max-width: calc(100% - 20px);
+
+        white-space: normal;
+    }
+
+
+    /* =====================================================
+       FOOTER - MOBILE
+       ===================================================== */
+
+    footer {
+        width: 100%;
+
+        overflow: hidden;
+    }
+
+    .top-footer {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        margin: 0;
+
+        gap: 0;
+    }
+
+    .leftside-top,
+    .rightside-top {
+        width: 100%;
+
+        padding: 2.5rem 1.2rem;
+    }
+
+    .header-leftside-top {
+        width: 100%;
+
+        align-items: center;
+
+        gap: 0.7rem;
+    }
+
+    .icon-header-leftside-top img {
+        width: 48px;
+
+        height: 48px;
+    }
+
+    .title-header-leftside-top p {
+        font-size: 1.8rem;
+    }
+
+    .description-header-leftside-top {
+        width: 100%;
+
+        font-size: 0.9rem;
+
+        line-height: 1.6;
+    }
+
+    .social-media {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 0.7rem;
+    }
+
+    #facebook,
+    #instagram,
+    #x,
+    #youtube {
+        padding: 0.35rem 0.6rem;
+    }
+
+
+    /* Newsletter */
+
+    .rightside-top {
+        padding-top: 1rem;
+    }
+
+    .header-rightside-top p {
+        font-size: 1.5rem;
+
+        text-align: center;
+
+        line-height: 1.4;
+    }
+
+    .newsletter {
+        width: 100%;
+
+        margin-top: 1.2rem;
+    }
+
+    .newsletter-form {
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 0.7rem;
+    }
+
+    #mail-for-subscribe,
+    #subscribe-button {
+        width: 100%;
+
+        min-width: 0;
+
+        flex: none;
+
+        font-size: 1rem;
+
+        padding: 0.75rem 1rem;
+    }
+
+
+    /* =====================================================
+       FOOTER COLUMNS
+       ===================================================== */
+
+    .middle-footer {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 0;
+
+        margin: 0;
+
+        padding: 0.5rem;
+
+        overflow: hidden;
+    }
+
+    .quick-links,
+    .account,
+    .platform,
+    .location {
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 1.5rem 0.7rem;
+
+        gap: 0.7rem;
+    }
+
+    .quick-links p,
+    .account p,
+    .platform p,
+    .location span {
+        font-size: 1rem;
+    }
+
+    .quick-links a,
+    .account a,
+    .platform a {
+        font-size: 0.85rem;
+
+        overflow-wrap: anywhere;
+    }
+
+
+    /* Location */
+
+    .location {
+        grid-column: 1 / -1;
+    }
+
+    .address {
+        display: grid;
+
+        grid-template-columns:
+            auto minmax(0, 1fr);
+
+        gap: 0.8rem;
+
+        width: 100%;
+    }
+
+    #heading-address {
+        white-space: nowrap;
+    }
+
+    #address-details {
+        min-width: 0;
+
+        overflow-wrap: anywhere;
+
+        word-break: normal;
+
+        line-height: 1.6;
+    }
+
+    .mail-id {
+        display: grid;
+
+        grid-template-columns:
+            auto minmax(0, 1fr);
+
+        gap: 0.8rem;
+
+        width: 100%;
+    }
+
+    .mail-id a {
+        min-width: 0;
+
+        overflow-wrap: anywhere;
+
+        word-break: break-word;
+
+        line-height: 1.5;
+    }
+
+    .bottom-footer {
+        font-size: 0.8rem;
+
+        line-height: 1.5;
+
+        padding: 1rem 0.5rem;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   iPhone SE / small Android phones
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    nav {
+        padding: 0 0.5rem;
+    }
+
+    #logo img {
+        width: 43px;
+
+        height: 43px;
+    }
+
+    #name h1 {
+        font-size: 1.55rem;
+    }
+
+    .rightside-nav button {
+        font-size: 0.75rem;
+
+        padding: 0.55rem 0.65rem;
+    }
+
+    .hamburger {
+        font-size: 1.7rem;
+    }
+
+    #campaigns-container {
+        padding: 1.5rem 0.7rem;
+    }
+
+    #campaigns-container-leftpart-header {
+        font-size: 2.1rem;
+    }
+
+    #campaigns-container-leftpart-subheader {
+        font-size: 0.9rem;
+    }
+
+    #campaigns-container-leftpart-heading-lower-description {
+        font-size: 0.82rem;
+    }
+
+    .hero-cta {
+        font-size: 0.82rem;
+
+        padding: 0.7rem 1rem;
+    }
+
+    #header-campaigns-homepage {
+        font-size: 1.7rem;
+    }
+
+    .middle-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .location {
+        grid-column: auto;
+    }
+}
+/* =========================================================
+   IPAD PRO FIX
+   1024px - 1366px
+   ========================================================= */
+
+@media screen and (min-width: 1001px) and (max-width: 1366px) {
+
+    /* Prevent the whole page from becoming narrower */
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    main,
+    section,
+    footer {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+
+    /* =====================================================
+       NAVBAR
+       ===================================================== */
+
+    nav {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 0 2rem;
+
+        height: 80px;
+
+        display: flex;
+        align-items: center;
+
+        margin-top: 0.5rem;
+    }
+
+    .information {
+        flex-shrink: 0;
+    }
+
+    .center-nav {
+        flex: 1;
+        min-width: 0;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .center-nav ul {
+        display: flex;
+
+        gap: 1.5rem;
+
+        white-space: nowrap;
+    }
+
+    .rightside-nav {
+        flex-shrink: 0;
+
+        display: flex;
+    }
+
+    .rightside-nav button {
+        white-space: nowrap;
+    }
+
+    /*
+       At iPad Pro width, use hamburger so the
+       navigation doesn't become cramped.
+    */
+
+    .hamburger {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+
+        border: none;
+        background: transparent;
+
+        color: #6A3556;
+
+        font-size: 2rem;
+
+        cursor: pointer;
+
+        padding: 0.3rem;
+    }
+
+    .center-nav {
+        display: none;
+    }
+
+    .center-nav.active {
+        display: block;
+
+        position: absolute;
+
+        top: 80px;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        padding: 1rem 0;
+
+        box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+        z-index: 9999;
+    }
+
+    .center-nav.active ul {
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 0;
+
+        align-items: center;
+    }
+
+    .center-nav.active ul li {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .center-nav.active ul li a {
+        display: block;
+
+        width: 100%;
+
+        padding: 1rem;
+
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       CAMPAIGN HERO
+       ===================================================== */
+
+    #campaigns-container {
+        width: 100%;
+        max-width: 100%;
+
+        display: flex;
+
+        box-sizing: border-box;
+
+        padding: 3rem 3rem;
+
+        margin-left: 0;
+        margin-right: 0;
+
+        gap: 2rem;
+
+        overflow: hidden;
+    }
+
+    #campaigns-container-leftpart {
+        width: 45%;
+
+        min-width: 0;
+    }
+
+    #campaigns-container-rightpart {
+        width: 50%;
+
+        min-width: 0;
+    }
+
+    #campaigns-container-rightpart > img {
+        width: 100%;
+
+        max-width: 520px;
+
+        height: 420px;
+
+        object-fit: cover;
+    }
+
+
+    /* =====================================================
+       CAMPAIGN GRID
+       ===================================================== */
+
+    .campaigns-homepage-grid {
+        width: 100%;
+        max-width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(300px, 380px));
+
+        justify-content: center;
+
+        gap: 2rem;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    footer {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+    .top-footer {
+        width: 100%;
+        max-width: 100%;
+
+        display: flex;
+
+        box-sizing: border-box;
+
+        margin: 0;
+
+        gap: 0;
+    }
+
+    .leftside-top,
+    .rightside-top {
+        width: 50%;
+
+        min-width: 0;
+
+        box-sizing: border-box;
+
+        padding: 4rem 3rem;
+    }
+
+    .header-leftside-top {
+        width: 100%;
+
+        min-width: 0;
+    }
+
+    .description-header-leftside-top {
+        width: 100%;
+
+        max-width: 500px;
+    }
+
+    .header-rightside-top {
+        width: 100%;
+    }
+
+    .newsletter {
+        width: 100%;
+    }
+
+    .newsletter-form {
+        width: 100%;
+
+        display: flex;
+
+        min-width: 0;
+    }
+
+    #mail-for-subscribe {
+        min-width: 0;
+
+        width: 60%;
+    }
+
+    #subscribe-button {
+        min-width: 120px;
+
+        width: 40%;
+    }
+
+
+    /* =====================================================
+       FOOTER MIDDLE
+       ===================================================== */
+
+    .middle-footer {
+        width: 100%;
+        max-width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr 1fr 1.5fr;
+
+        gap: 0;
+
+        margin: 0;
+
+        padding: 0;
+
+        box-sizing: border-box;
+    }
+
+    .quick-links,
+    .account,
+    .platform,
+    .location {
+        width: 100%;
+
+        min-width: 0;
+
+        box-sizing: border-box;
+
+        padding: 3rem 2rem;
+    }
+
+
+    /* Prevent address/email from pushing footer */
+
+    .address,
+    .mail-id {
+        width: 100%;
+
+        min-width: 0;
+
+        display: grid;
+
+        grid-template-columns: auto minmax(0, 1fr);
+
+        gap: 0.7rem;
+    }
+
+    #address-details,
+    .mail-id a {
+        min-width: 0;
+
+        max-width: 100%;
+
+        overflow-wrap: anywhere;
+
+        word-break: break-word;
+    }
+
+    .bottom-footer {
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+}

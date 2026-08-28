@@ -1,0 +1,1504 @@
+/* =========================================================
+   FONTS
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff4e8;
+    color: #370f2d;
+    overflow-x: hidden;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.site-header {
+    width: 100%;
+    background: #ffffff;
+}
+
+
+.nav {
+    width: 100%;
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 4rem;
+}
+
+
+.information {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    flex-shrink: 0;
+}
+
+
+#logo img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+}
+
+
+#name h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.3rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+
+#name a {
+    color: #6a3556;
+}
+
+
+/* =========================================================
+   DESKTOP NAV
+========================================================= */
+
+.center-nav {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 0 2rem;
+}
+
+
+.center-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    list-style: none;
+}
+
+
+.center-nav a {
+    position: relative;
+
+    color: #6a3556;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    padding: 0.5rem 0;
+
+    transition: 0.25s ease;
+}
+
+
+.center-nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: orangered;
+
+    transition: width 0.25s ease;
+}
+
+
+.center-nav a:hover {
+    color: #370f2d;
+    transform: translateY(-3px);
+}
+
+
+.center-nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   DONATE BUTTON
+========================================================= */
+
+.rightside-nav {
+    flex-shrink: 0;
+}
+
+
+.rightside-nav button {
+    border: none;
+    border-radius: 10px;
+
+    background: orangered;
+    color: white;
+
+    padding: 0.75rem 1.3rem;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+.rightside-nav button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 69, 0, 0.25);
+}
+
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+
+.hamburger {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    color: #6a3556;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+
+    width: 44px;
+    height: 44px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   CONTACT PAGE
+========================================================= */
+
+.contact-page {
+    width: 100%;
+}
+
+
+.contact-wrapper {
+    width: min(1400px, 92%);
+
+    margin: 4rem auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, 0.85fr)
+        minmax(500px, 1.4fr);
+
+    gap: 3rem;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   LEFT CONTACT CARD
+========================================================= */
+
+.contact-info {
+    width: 100%;
+}
+
+
+.info-card {
+    position: relative;
+
+    width: 100%;
+
+    padding: 3rem;
+
+    background: #370f2d;
+
+    color: white;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 60px rgba(55, 15, 45, 0.2);
+}
+
+
+.info-decoration {
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -80px;
+    top: -80px;
+
+    background: rgba(255, 69, 0, 0.22);
+
+    border-radius: 50%;
+}
+
+
+.section-label {
+    position: relative;
+
+    display: inline-block;
+
+    color: orangered;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 0.8rem;
+}
+
+
+.info-card h1 {
+    position: relative;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(2.3rem, 4vw, 3.5rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 1rem;
+}
+
+
+.info-card h1 span {
+    color: orangered;
+    font-style: italic;
+}
+
+
+.info-intro {
+    position: relative;
+
+    color: #e9dce5;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 2rem;
+}
+
+
+/* =========================================================
+   CONTACT ITEMS
+========================================================= */
+
+.info-item {
+    position: relative;
+
+    display: flex;
+
+    gap: 1rem;
+
+    margin-bottom: 1.8rem;
+
+    align-items: flex-start;
+}
+
+
+.info-icon {
+    flex-shrink: 0;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 69, 0, 0.15);
+
+    color: orangered;
+
+    font-size: 1.3rem;
+}
+
+
+.info-item h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 0.3rem;
+}
+
+
+.info-item a {
+    color: #ffffff;
+
+    font-size: 0.95rem;
+}
+
+
+.info-item address {
+    color: #ded2da;
+
+    font-style: normal;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.map-container {
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 2rem;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+.map-container iframe {
+    display: block;
+
+    width: 100%;
+    height: 220px;
+
+    border: 0;
+}
+
+
+.map-button {
+    margin-top: 1rem;
+
+    width: fit-content;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.6rem;
+
+    padding: 0.75rem 1.1rem;
+
+    border-radius: 10px;
+
+    background: orangered;
+
+    color: white;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    transition: 0.25s ease;
+}
+
+
+.map-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 20px rgba(255, 69, 0, 0.3);
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.contact-form-section {
+    width: 100%;
+}
+
+
+.form-card {
+    width: 100%;
+
+    background: white;
+
+    border-radius: 28px;
+
+    padding: 3.5rem;
+
+    box-shadow:
+        0 25px 60px rgba(55, 15, 45, 0.12);
+}
+
+
+.form-heading span {
+    color: orangered;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.form-heading h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(2.3rem, 4vw, 3.5rem);
+
+    color: #370f2d;
+
+    margin: 0.5rem 0;
+}
+
+
+.form-heading p {
+    color: #6a3556;
+
+    font-size: 0.95rem;
+
+    line-height: 1.6;
+
+    margin-bottom: 2rem;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+#contactForm {
+    width: 100%;
+}
+
+
+.form-row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 1.3rem;
+}
+
+
+.form-group {
+    width: 100%;
+
+    margin-bottom: 1.3rem;
+}
+
+
+.form-group label {
+    display: block;
+
+    color: #370f2d;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    margin-bottom: 0.5rem;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid #e2d4dc;
+
+    border-radius: 12px;
+
+    background: #fffaf7;
+
+    color: #370f2d;
+
+    padding: 0.9rem 1rem;
+
+    font-size: 0.95rem;
+
+    outline: none;
+
+    transition: 0.25s ease;
+}
+
+
+.form-group input {
+    height: 50px;
+}
+
+
+.form-group textarea {
+    min-height: 160px;
+
+    resize: vertical;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: orangered;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 4px rgba(255, 69, 0, 0.08);
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #a998a2;
+}
+
+
+/* =========================================================
+   SEND BUTTON
+========================================================= */
+
+#submit {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.7rem;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: orangered;
+
+    color: white;
+
+    padding: 0.9rem 1.6rem;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+#submit:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(255, 69, 0, 0.3);
+}
+
+
+#submit:disabled {
+    opacity: 0.7;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   SUCCESS MESSAGE
+========================================================= */
+
+.success-message {
+    display: none;
+
+    align-items: flex-start;
+
+    gap: 1rem;
+
+    padding: 1.3rem;
+
+    margin-bottom: 1.5rem;
+
+    border-radius: 15px;
+
+    background: #edf9f1;
+
+    border: 1px solid #bce7c8;
+
+    color: #245c32;
+}
+
+
+.success-message.show {
+    display: flex;
+
+    animation: successAnimation 0.4s ease;
+}
+
+
+.success-message > i {
+    color: #1c9b45;
+
+    font-size: 1.8rem;
+
+    flex-shrink: 0;
+}
+
+
+.success-message h3 {
+    margin-bottom: 0.2rem;
+
+    font-size: 1rem;
+}
+
+
+.success-message p {
+    font-size: 0.85rem;
+
+    line-height: 1.5;
+}
+
+
+@keyframes successAnimation {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    width: 100%;
+
+    background: #0f3057;
+
+    color: #eaf4ff;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TOP FOOTER
+========================================================= */
+
+.top-footer {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    border-bottom: 1px solid rgba(234, 244, 255, 0.3);
+}
+
+
+.leftside-top,
+.rightside-top {
+    width: 100%;
+
+    padding: 4rem clamp(2rem, 5vw, 5rem);
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.header-leftside-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.8rem;
+}
+
+
+.icon-header-leftside-top {
+    flex-shrink: 0;
+}
+
+
+.icon-header-leftside-top img {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+}
+
+
+.title-header-leftside-top p {
+    font-family: "Playfair Display", serif;
+
+    font-size: 2.2rem;
+
+    font-weight: 600;
+}
+
+
+.description-header-leftside-top {
+    max-width: 550px;
+
+    margin-top: 1rem;
+
+    color: #d7e1eb;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA
+========================================================= */
+
+.social-media {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+    margin-top: 1.5rem;
+}
+
+
+.social-media > div {
+    width: 52px;
+    height: 52px;
+
+    border: 1px solid #eaf4ff;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s ease;
+}
+
+
+.social-media a {
+    color: #eaf4ff;
+
+    font-size: 1.5rem;
+}
+
+
+.social-media > div:hover {
+    background: orangered;
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.rightside-top {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.header-rightside-top p {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+.newsletter {
+    width: 100%;
+
+    margin-top: 1.5rem;
+}
+
+
+.newsletter-form {
+    width: 100%;
+
+    display: flex;
+
+    gap: 0.7rem;
+}
+
+
+#mail-for-subscribe {
+    min-width: 0;
+
+    flex: 1;
+
+    height: 52px;
+
+    padding: 0 1rem;
+
+    border: none;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 1rem;
+}
+
+
+#subscribe-button {
+    flex-shrink: 0;
+
+    height: 52px;
+
+    padding: 0 1.5rem;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: orangered;
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   MIDDLE FOOTER
+========================================================= */
+
+.middle-footer {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr
+        1.5fr;
+
+    border-bottom: 1px solid rgba(234, 244, 255, 0.3);
+}
+
+
+.footer-column,
+.location {
+    min-width: 0;
+
+    padding: 3rem clamp(1.5rem, 4vw, 4rem);
+}
+
+
+.footer-column p,
+.location-title {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.2rem;
+
+    font-weight: 600;
+
+    margin-bottom: 1.2rem;
+}
+
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.7rem;
+}
+
+
+.footer-column a {
+    color: #aebdcc;
+
+    font-size: 0.95rem;
+
+    transition: 0.2s ease;
+}
+
+
+.footer-column a:hover {
+    color: white;
+
+    padding-left: 4px;
+}
+
+
+/* =========================================================
+   FOOTER LOCATION
+========================================================= */
+
+.footer-contact-row {
+    display: grid;
+
+    grid-template-columns: 75px minmax(0, 1fr);
+
+    gap: 1rem;
+
+    margin-bottom: 1.5rem;
+
+    color: #aebdcc;
+
+    line-height: 1.7;
+
+    min-width: 0;
+}
+
+
+.footer-contact-row strong {
+    color: #eaf4ff;
+
+    font-size: 0.95rem;
+
+    white-space: nowrap;
+}
+
+
+.footer-contact-row span,
+.footer-contact-row a {
+    min-width: 0;
+
+    max-width: 100%;
+
+    color: #aebdcc;
+
+    font-size: 0.95rem;
+
+    overflow-wrap: anywhere;
+
+    word-break: normal;
+}
+
+
+.footer-contact-row a:hover {
+    color: white;
+}
+
+
+/* =========================================================
+   BOTTOM FOOTER
+========================================================= */
+
+.bottom-footer {
+    width: 100%;
+
+    padding: 1.2rem;
+
+    text-align: center;
+
+    color: #aebdcc;
+
+    font-size: 0.85rem;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .nav {
+        padding: 0 2rem;
+    }
+
+
+    .center-nav {
+        margin: 0 1rem;
+    }
+
+
+    .center-nav ul {
+        gap: 1.2rem;
+    }
+
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+
+        width: min(750px, 92%);
+
+        margin: 3rem auto;
+    }
+
+
+    .info-card {
+        padding: 2.5rem;
+    }
+
+
+    .top-footer {
+        grid-template-columns: 1fr;
+    }
+
+
+    .leftside-top,
+    .rightside-top {
+        padding: 3rem 2.5rem;
+    }
+
+
+    .middle-footer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    .location {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================================
+   HAMBURGER / TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .nav {
+        min-height: 70px;
+
+        padding: 0 1.2rem;
+    }
+
+
+    #logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    #name h1 {
+        font-size: 2rem;
+    }
+
+
+    .center-nav {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        margin: 0;
+
+        background: white;
+
+        box-shadow:
+            0 10px 25px rgba(0, 0, 0, 0.12);
+
+        z-index: 9999;
+    }
+
+
+    .center-nav.active {
+        display: block;
+    }
+
+
+    .center-nav ul {
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+
+    .center-nav li {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .center-nav a {
+        display: block;
+
+        width: 100%;
+
+        padding: 1rem;
+
+        transform: none !important;
+    }
+
+
+    .rightside-nav {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    }
+
+    .rightside-nav button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    }
+
+
+    .hamburger {
+        display: flex;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL TABLETS
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .contact-wrapper {
+        width: calc(100% - 2rem);
+
+        margin: 2rem auto;
+    }
+
+
+    .form-card {
+        padding: 2rem 1.3rem;
+
+        border-radius: 20px;
+    }
+
+
+    .info-card {
+        padding: 2rem 1.3rem;
+
+        border-radius: 20px;
+    }
+
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    .map-container iframe {
+        height: 200px;
+    }
+
+
+    .middle-footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .footer-column,
+    .location {
+        padding: 2rem 1.2rem;
+    }
+
+
+    .location {
+        grid-column: 1 / -1;
+    }
+
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+
+    #mail-for-subscribe,
+    #subscribe-button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .nav {
+        min-height: 64px;
+
+        padding: 0 0.8rem;
+    }
+
+
+    #logo img {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    #name h1 {
+        font-size: 1.55rem;
+    }
+
+
+    .hamburger {
+        width: 40px;
+        height: 40px;
+
+        font-size: 1.8rem;
+    }
+
+
+    .center-nav {
+        top: 64px;
+    }
+
+
+    .contact-wrapper {
+        width: calc(100% - 1.2rem);
+
+        margin: 1.5rem auto;
+    }
+
+
+    .info-card {
+        padding: 1.6rem 1rem;
+    }
+
+
+    .form-card {
+        padding: 1.6rem 1rem;
+    }
+
+
+    .info-card h1 {
+        font-size: 2.4rem;
+    }
+
+
+    .form-heading h2 {
+        font-size: 2.3rem;
+    }
+
+
+    .info-intro {
+        font-size: 0.9rem;
+    }
+
+
+    .map-container iframe {
+        height: 190px;
+    }
+
+
+    .map-button {
+        width: 100%;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+
+    #submit {
+        width: 100%;
+    }
+
+
+    /* FOOTER */
+
+    .leftside-top,
+    .rightside-top {
+        padding: 2.3rem 1rem;
+    }
+
+
+    .title-header-leftside-top p {
+        font-size: 1.7rem;
+    }
+
+
+    .description-header-leftside-top {
+        font-size: 0.9rem;
+    }
+
+
+    .social-media {
+        gap: 0.7rem;
+    }
+
+
+    .social-media > div {
+        width: 46px;
+        height: 46px;
+    }
+
+
+    .middle-footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .footer-column,
+    .location {
+        padding: 1.8rem 0.8rem;
+    }
+
+
+    .footer-column p,
+    .location-title {
+        font-size: 1rem;
+    }
+
+
+    .footer-column a {
+        font-size: 0.85rem;
+    }
+
+
+    .footer-contact-row {
+        grid-template-columns: 65px minmax(0, 1fr);
+
+        gap: 0.5rem;
+    }
+
+
+    .footer-contact-row strong,
+    .footer-contact-row span,
+    .footer-contact-row a {
+        font-size: 0.82rem;
+    }
+
+
+    .bottom-footer {
+        padding: 1rem 0.7rem;
+
+        font-size: 0.75rem;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    #name h1 {
+        font-size: 1.4rem;
+    }
+
+
+    .contact-wrapper {
+        width: calc(100% - 0.8rem);
+    }
+
+
+    .info-card,
+    .form-card {
+        padding: 1.3rem 0.8rem;
+    }
+
+
+    .middle-footer {
+        grid-template-columns: 1fr;
+    }
+
+
+    .location {
+        grid-column: auto;
+    }
+
+
+    .footer-column,
+    .location {
+        padding: 1.5rem 0.8rem;
+    }
+
+}
