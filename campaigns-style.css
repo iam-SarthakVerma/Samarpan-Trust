@@ -1983,3 +1983,146 @@ footer
         box-sizing: border-box;
     }
 }
+/* =========================================
+   COMMON NEWSLETTER STYLE
+   Same size on every page
+========================================= */
+
+.newsletter {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.newsletter-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+}
+
+/* Email box */
+#mail-for-subscribe {
+    flex: 1 1 auto;
+
+    width: 100%;
+    height: 52px;
+
+    padding: 0 1rem;
+
+    border: 1px solid #d8d8d8;
+    border-right: none;
+
+    border-radius: 7px 0 0 7px;
+
+    background-color: white;
+    color: #370F2D;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+
+    outline: none;
+}
+
+/* Subscribe button */
+#subscribe-button {
+    flex: 0 0 140px;
+
+    width: 140px;
+    height: 52px;
+
+    padding: 0 1rem;
+
+    border: none;
+    border-radius: 0 7px 7px 0;
+
+    background-color: orangered;
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+#subscribe-button:hover {
+    background-color: #e63f00;
+    transform: none;
+    box-shadow: 0 6px 15px rgba(255, 69, 0, 0.25);
+}
+
+#mail-for-subscribe:focus {
+    border-color: orangered;
+    box-shadow: 0 0 0 2px rgba(255, 69, 0, 0.12);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media screen and (max-width: 900px) {
+
+    .newsletter-form {
+        max-width: 520px;
+    }
+
+    #mail-for-subscribe {
+        height: 50px;
+        font-size: 0.95rem;
+    }
+
+    #subscribe-button {
+        height: 50px;
+        flex-basis: 130px;
+        width: 130px;
+        font-size: 0.95rem;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+    .newsletter {
+        width: 100%;
+    }
+
+    .newsletter-form {
+        width: 100%;
+        max-width: none;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+
+    #mail-for-subscribe {
+        width: 100%;
+        height: 50px;
+
+        border: 1px solid #d8d8d8;
+        border-radius: 7px;
+
+        font-size: 0.9rem;
+    }
+
+    #subscribe-button {
+        width: 100%;
+        height: 50px;
+
+        flex: none;
+
+        border-radius: 7px;
+
+        font-size: 0.95rem;
+    }
+}
