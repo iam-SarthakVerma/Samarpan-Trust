@@ -117,3 +117,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+const form = document.querySelector('.newsletter-form');
+let input=document.getElementById('mail-for-subscribe');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    input.value = '';
+});

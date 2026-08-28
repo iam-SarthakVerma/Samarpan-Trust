@@ -605,7 +605,24 @@ footer
     padding: 5rem 4rem;
     gap: 1rem;
 }
+#subscribe-button {
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.6rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 18px rgba(255, 69, 0, 0.25);
+}
 
+#subscribe-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 22px rgba(255, 69, 0, 0.4);
+}
 .quick-links p,.account p,.platform p,.location span
 {
     
