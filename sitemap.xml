@@ -3,22 +3,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://samarpan-trust.vercel.app/</loc>
+        <loc>https://samarpantrust.social/</loc>
     </url>
 
     <url>
-        <loc>https://samarpan-trust.vercel.app/about</loc>
+        <loc>https://samarpantrust.social/about</loc>
     </url>
 
     <url>
-        <loc>https://samarpan-trust.vercel.app/campaigns</loc>
+        <loc>https://samarpantrust.social/campaigns</loc>
     </url>
 
     <url>
-        <loc>https://samarpan-trust.vercel.app/contactform</loc>
+        <loc>https://samarpantrust.social/contactform</loc>
     </url>
 
     <url>
-        <loc>https://samarpan-trust.vercel.app/Donation</loc>
+        <loc>https://samarpantrust.social/Donation</loc>
     </url>
+
 </urlset>
